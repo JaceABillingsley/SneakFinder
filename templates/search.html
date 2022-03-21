@@ -1,0 +1,282 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/sneakers.png"> 
+    <title>SneakFinder - Search</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+  <style>
+    img {
+      color: #fff
+    }
+  </style>
+  <style>
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.next {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.round {
+  border-radius: 50%;
+}
+    </style>
+<!--
+    
+TemplateMo 556 Catalog-Z
+
+https://templatemo.com/tm-556-catalog-z
+
+-->
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#=/">
+              <img src="/static/sneakers.png" width='64px' height='64px'>
+                SneakFinder
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+			    <li class="nav-item">
+                    <a class="nav-link nav-link-2" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="/search">Search</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" style="background-color: gray">
+        <form class="d-flex tm-search-form" action="/search" target="_self" method="GET" autocomplete="off">
+            <input class="form-control tm-search-input" type="text" placeholder="Search" aria-label="Search" name="searchdata" required>
+            <button class="btn btn-outline-success tm-search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" style="text-transform: capitalize;">
+                Search Results For: {{ searchdata }} 
+            </h2>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">
+        	<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak1[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak1[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak1[1] }}</h2>
+                        <a href="/details?id={{sneak1[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light" style="text-transform: capitalize;">{{ sneak1[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak1[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak2[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak2[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak2[1] }}</h2>
+                        <a href="/details?id={{sneak2[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light" style="text-transform: capitalize;">{{ sneak2[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak2[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak3[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak3[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak3[1] }}</h2>
+                        <a href="/details?id={{sneak3[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light" style="text-transform: capitalize;">{{ sneak3[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak3[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak4[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak4[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak4[1] }}</h2>
+                        <a href="/details?id={{sneak4[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak4[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak4[4] }}</span>
+                </div>
+            </div>
+            
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak5[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak5[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak5[1] }}</h2>
+                        <a href="/details?id={{sneak5[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak5[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak5[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak6[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak6[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak6[1] }}</h2>
+                        <a href="/details?id={{sneak6[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span class="tm-text-gray-light" style="text-transform: capitalize;">{{ sneak6[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak6[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak7[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak7[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak7[1] }}</h2>
+                        <a href="/details?id={{sneak7[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak7[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak7[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak8[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak8[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak8[1] }}</h2>
+                        <a href="/details?id={{sneak8[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak8[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak8[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak9[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak9[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak9[1] }}</h2>
+                        <a href="/details?id={{sneak9[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak9[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak9[4] }}</span>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style='visibility: {{ sneak10[2] }}'>
+                <figure class="effect-ming tm-video-item">
+                    <img class="lazy" data-src="{{ sneak10[0] }}" alt="Image Not Found" class="img-fluid">
+                    <figcaption class="d-flex align-items-center justify-content-center">
+                        <h2 style="text-transform: capitalize;">{{ sneak10[1] }}</h2>
+                        <a href="/details?id={{sneak10[5]}}">More  Details</a>
+                    </figcaption>                    
+                </figure>
+                <div class="d-flex justify-content-between tm-text-gray">
+                    <span style="text-transform: capitalize;" class="tm-text-gray-light">{{ sneak10[3] }}</span>
+                    <span style="text-transform: capitalize;">${{ sneak10[4] }}</span>
+                </div>
+            </div>
+          <center>
+              <a href="/search{{prevpage}}?searchdata={{searchdata}}" class="previous round" {{prevenable}}>&#8249;</a>
+              <a href="/search{{nextpage}}?searchdata={{searchdata}}" class="next round" {{nextenable}}>&#8250;</a>
+            <br>
+            <p style='color: #000'>{{page}}/{{totalpages}}</p>
+      </center>
+            </div> 
+        </div> <!-- row -->
+    </div> <!-- container-fluid, tm-container-content -->
+
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                  <h4>SneakFinder was created by Jace Billingsley, <a href='https://jacebapps.com'>JaceBApps.com</a></h4><br></br><br></br>
+                  <a href="https://www.flaticon.com/free-icons/shoes" title="shoes icons">Shoes icons created by Freepik - Flaticon</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="static/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+      lazyload()
+    </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("load", lazyload);
+        }
+    }, 20);
+  }
+      window.addEventListener("load", lazyload);
+      document.addEventListener("scroll", lazyload);
+    });  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="static/sneakers.png"> 
+    <title>SneakFinder</title>
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="static/css/templatemo-style.css">
+<!--
+    
+TemplateMo 556 Catalog-Z
+
+https://templatemo.com/tm-556-catalog-z
+
+-->
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+              <img src="/static/sneakers.png" width='64px' height='64px'>
+                SneakFinder
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+			    <li class="nav-item">
+                    <a class="nav-link nav-link-1 active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link nav-link-2" href="/search">Search</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" style="background-color: gray">
+        <form class="d-flex tm-search-form" action="/search" target="_self" method="GET" autocomplete="off">
+            <input class="form-control tm-search-input" type="text" placeholder="Search" aria-label="Search" name="searchdata" required>
+            <button class="btn btn-outline-success tm-search-btn">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+    </div>
+
+    <div class="container-fluid tm-container-content tm-mt-60">
+        <div class="row mb-4">
+            <h2 class="col-6 tm-text-primary" style="text-transform: capitalize;">
+                About SneakFinder 
+            </h2>
+          <br style="line-height: 200%;">
+          <div>
+            <img src="/static/sneakers.png" style='width: 400px; height=400px;'>
+            <br></br>
+            <h2 style=''>SneakFinder is a shoe price comparison app based off of the Sneaks-API. SneakFinder finds and compares prices between popular second-hand sellers.</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p>Note: Some images may have a hard time loading on certain devices. If this happens, please reload the page or contact me. My contacts can be found at <a href='https://jacebapps.com'>JaceBApps.com</a>.</p>
+            <p>Note: As this application is still in beta, a small ammount of shoes will not be accessible. If this happens, try again or contact me. My contacts can be found at <a href='https://jacebapps.com'>JaceBApps.com</a>.</p>
+          </div>
+        </div>
+        <div class="row tm-mb-90 tm-gallery">   
+        </div> <!-- row -->
+    </div> <!-- container-fluid, tm-container-content -->
+
+    <footer class="tm-bg-gray pt-5 pb-3 tm-text-gray tm-footer">
+        <div class="container-fluid tm-container-small">
+            <div class="row">
+                  <h4>SneakFinder was created by Jace Billingsley, <a href='https://jacebapps.com'>JaceBApps.com</a></h4><br></br><br></br>
+                  <a href="https://www.flaticon.com/free-icons/shoes" title="shoes icons">Shoes icons created by Freepik - Flaticon</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+      function search() {
+        var jobValue = document.getElementsByName('searchbox')[0].value
+        window.location.href = `https://sneaksite.jacebillingsley.repl.co/search?searchdata=${jobValue}`;
+      }
+    </script>
+    <script src="static/js/plugins.js"></script>
+    <script>
+        $(window).on("load", function() {
+            $('body').addClass('loaded');
+        });
+    </script>
+</body>
+</html>

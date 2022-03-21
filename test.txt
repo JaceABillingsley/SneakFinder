@@ -1,0 +1,38 @@
+import json
+import requests
+
+searchdata = input('What would you like to search for: ')
+
+print(' ')
+print('-----------------------')
+print(' ')
+
+url = requests.get(f'https://sneak.jacebillingsley.repl.co/search/{searchdata}')
+text = url.text
+
+data = json.loads(text)
+
+for i in range(0, 10):
+  print('Info: ')
+  print(f'JSON ID: {i}')
+  print(f'Brand: {data[i]["brand"]}')
+  print(f'Shoe:  {data[i]["shoeName"]}')
+  print(f'Color: {data[i]["colorway"]}')
+  print(f'Style ID: {data[i]["styleID"]}')
+  print(f'Image: {data[i]["thumbnail"]}')
+  print(' ')
+  print("Lowest Prices: ")
+  print(f'StockX:       {data[i]["lowestResellPrice"]["stockX"]}')
+  print(f'GOAT:         {data[i]["lowestResellPrice"]["goat"]}')
+  print(f'FlightClub:   {data[i]["lowestResellPrice"]["flightClub"]}')
+  print(' ')
+  print('Links: ')
+  print(f'StockX:       {data[i]["resellLinks"]["stockX"]}')
+  print(f'GOAT:         {data[i]["resellLinks"]["goat"]}')
+  print(f'FlightClub:   {data[i]["resellLinks"]["flightClub"]}')
+  
+  print(' ')
+  print('-----------------------')
+  print(' ')
+
+<i class="fas fa-film mr-2"></i>
